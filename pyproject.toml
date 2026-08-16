@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "livetennis-tui"
+version = "0.1.0"
+description = "Live tennis scores in your terminal — ATP, WTA, Challenger, ITF and juniors, on the Live Tennis API."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Live Tennis API", email = "hello@livetennisapi.com" }]
+keywords = ["tennis", "tui", "textual", "live-scores", "terminal", "atp", "wta"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Terminals",
+    "Topic :: Games/Entertainment",
+]
+dependencies = [
+    "livetennisapi>=1.3.2",
+    "textual>=0.86",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+]
+
+[project.scripts]
+livetennis-tui = "livetennis_tui.app:main"
+
+[project.urls]
+Homepage = "https://livetennisapi.com"
+Documentation = "https://docs.livetennisapi.com"
+Repository = "https://github.com/livetennisapi/livetennis-tui"
+Changelog = "https://github.com/livetennisapi/livetennis-tui/blob/main/CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/livetennis_tui"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
