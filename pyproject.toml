@@ -9,7 +9,7 @@ description = "Live tennis scores in your terminal — ATP, WTA, Challenger, ITF
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.10"
-authors = [{ name = "Live Tennis API", email = "hello@livetennisapi.com" }]
+authors = [{ name = "Synapse Research Ltd", email = "hello@livetennisapi.com" }]
 keywords = ["tennis", "tui", "textual", "live-scores", "terminal", "atp", "wta"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -43,6 +43,7 @@ Homepage = "https://livetennisapi.com"
 Documentation = "https://docs.livetennisapi.com"
 Repository = "https://github.com/livetennisapi/livetennis-tui"
 Changelog = "https://github.com/livetennisapi/livetennis-tui/blob/main/CHANGELOG.md"
+Author = "https://synapsereality.io"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/livetennis_tui"]
